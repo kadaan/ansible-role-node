@@ -1,0 +1,13 @@
+---
+- name: Ensure node homebrew package is installed.
+  homebrew:
+    name: node
+    state: present
+
+- name: Ensure configured global npm package are present.
+  npm:
+    name: "{{ item.name }}"
+    version: "{{ item.version | default('latest') }}"
+    global: yes
+    state: present
+  with_items: "{{ npm_global_packages }}"
