@@ -10,4 +10,4 @@
     version: "{{ item.version | default('latest') }}"
     global: yes
     state: present
-  with_items: "{{ npm_global_packages }}"
+  with_items: "{{ node_npm_global_packages }}"

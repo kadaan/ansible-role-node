@@ -10,7 +10,11 @@ None.
 
 ## Role Variables
 
-None.
+Available variables are listed below, along with default values (see `defaults/main.yml`):
+
+    node_npm_global_packages: []
+
+Global NPM packages you would like to make sure are installed.
 
 ## Dependencies
 
