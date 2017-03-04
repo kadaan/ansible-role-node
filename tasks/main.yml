@@ -4,6 +4,15 @@
     name: node
     state: present
 
+- name: Ensure nodenv homebrew package is installed.
+  homebrew:
+    name: nodenv
+    state: present
+
+- name: Ensure configured node versions are present.
+  command: "nodenv install -s {{ item }}"
+  with_items: "{{ node_versions }}"
+
 - name: Ensure configured global npm package are present.
   npm:
     name: "{{ item.name }}"
