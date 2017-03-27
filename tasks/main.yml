@@ -3,11 +3,13 @@
   homebrew:
     name: node
     state: present
+  when: node_versions.0 is defined
 
 - name: Ensure nodenv homebrew package is installed.
   homebrew:
     name: nodenv
     state: present
+  when: node_versions.0 is defined
 
 - name: Ensure configured node versions are present.
   command: "nodenv install -s {{ item }}"
