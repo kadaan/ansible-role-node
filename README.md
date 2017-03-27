@@ -28,7 +28,7 @@ Global NPM packages you would like to make sure are installed.
 
     - hosts: localhost
       roles:
-        - { role: kadaan.node }
+        - { role: kadaan.node, node_execute: true }
 
 ## License
 
