@@ -3,18 +3,15 @@
   homebrew:
     name: node
     state: present
-  when: node_execute == true
 
 - name: Ensure nodenv homebrew package is installed.
   homebrew:
     name: nodenv
     state: present
-  when: node_execute == true
 
 - name: Ensure configured node versions are present.
   command: "nodenv install -s {{ item }}"
   with_items: "{{ node_versions }}"
-  when: node_execute == true
 
 - name: Ensure configured global npm package are present.
   npm:
@@ -23,4 +20,3 @@
     global: yes
     state: present
   with_items: "{{ node_npm_global_packages }}"
-  when: node_execute == true
