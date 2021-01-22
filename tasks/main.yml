@@ -19,7 +19,7 @@
   npm:
     name: "{{ item.name }}"
     version: "{{ item.version | default('latest') }}"
-    global: yes
+    global: true
     state: present
   with_items: "{{ node_npm_global_packages }}"
   become: true

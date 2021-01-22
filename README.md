@@ -1,6 +1,6 @@
 # Ansible Role: Node
 
-[![Build Status](https://travis-ci.org/kadaan/ansible-role-node.svg?branch=master)](https://travis-ci.org/kadaan/ansible-role-node)
+[![CI][badge-gh-actions]][link-gh-actions]
 
 Installs node and global npm packages.
 
@@ -33,3 +33,6 @@ Global NPM packages you would like to make sure are installed.
 ## License
 
 Apache 2.0
+
+[badge-gh-actions]: https://github.com/kadaan/ansible-role-node/workflows/CI/badge.svg?event=push
+[link-gh-actions]: https://github.com/kadaan/ansible-role-node/actions?query=workflow%3ACI

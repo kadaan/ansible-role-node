@@ -1,17 +1,20 @@
+---
+dependencies:
+  - kadaan.homebrew
+
 galaxy_info:
+  role_name: node
   author: kadaan
-  description: Installs node and global npm packages.
-  license: Apache 2.0
-  min_ansible_version: 2.2
+  description: Installs node and global npm packages
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.5
   platforms:
     - name: MacOSX
       versions:
-        - 10.11
-        - 10.12
+        - all
+        - any
   galaxy_tags:
     - development
     - system
-    - console
+    - packaging
     - node
-dependencies:
-  - kadaan.homebrew
